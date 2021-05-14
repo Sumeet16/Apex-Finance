@@ -15,7 +15,8 @@ input {
     --backgroundColor: #0f3057;
     --buttonColor: #6ddccf;
     --accentColor: #28527a;
-}
+    --textColor : black;
+  }
 
 .container {
   position: relative;
