@@ -440,8 +440,9 @@ color: #fff;
     visibility: hidden;
   }
   .image {
-    display: none;
+    display: none !important;
   }
+  
   .panel .content {
     padding: 0.5rem 1rem;
   }
@@ -457,5 +458,9 @@ color: #fff;
   .container.sign-up-mode:before {
     bottom: 28%;
     left: 50%;
+  }
+  .error{
+    display: block;
+    left: 600%;
   }
 }

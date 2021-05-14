@@ -57,6 +57,9 @@ submitSignUp.addEventListener("click", () => {
   if (passSignUp === "") {
     errorPassSignUp.style.display = "block";
   }
+
+
+  // password 
 });
 
 submitSignIn.addEventListener("click", () => {
