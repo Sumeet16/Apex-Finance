@@ -11,6 +11,7 @@ input {
   font-family: "Poppins", sans-serif;
 }
 
+
 :root{
     --backgroundColor: #0f3057;
     --buttonColor: #6ddccf;
@@ -49,6 +50,7 @@ input {
   position: relative;
   bottom: 40px;
   left: 330px;
+  display: block;
 }
 
 .forms-container {
@@ -186,6 +188,13 @@ color: #fff;
   color: #28527a;
   box-shadow: 5px 5px #6ddccf;
 }
+.btn.solid:active{
+  transform: translateY(10px);
+}
+
+.btn:active{
+  transform: translateY(10px);
+}
 
 .panels-container {
   position: absolute;
@@ -265,8 +274,13 @@ color: #fff;
 
 .btn-1:hover {
     color: var(--buttonColor);
-    box-shadow: 5px 5px #6ddccf;
-  }
+  box-shadow: 5px 5px #6ddccf;
+
+}
+
+.btn-1.transparent:active{
+  transform: translateY(10px);
+}
 
 .right-panel .image,
 .right-panel .content {
