@@ -161,6 +161,29 @@ form.sign-in-form {
   font-weight: 500;
 }
 
+.firstNameSignUp{
+  padding-left: 10px;
+}
+
+.lastNameSignUp{
+  padding-left: 10px;
+}
+
+.name{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 190px;
+}
+
+.nameDiv{
+  width: 32.5%;
+}
+
+.nameDiv i{
+  padding-left: 10px;
+}
+
 .social-text {
 color: #fff;
   padding: 0.7rem 0;
