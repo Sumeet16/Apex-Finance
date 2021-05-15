@@ -17,8 +17,7 @@ let submitSignUp = document.getElementById("submitSignUp");
 let submitSignIn = document.querySelector(".submitLogIn");
 
 // declaring the tool tips (hints) for the error icons
-let emailSignUpToolTip = document.querySelector('.emailSignUpToolTip');
-
+let emailSignUpToolTip = document.querySelector(".emailSignUpToolTip");
 
 // setting the default error icons' state to display none
 errorEmailSignUp.style.display = "none";
@@ -37,16 +36,16 @@ sign_in_btn.addEventListener("click", () =>
   container.classList.remove("sign-up-mode")
 );
 
-errorEmailSignUp.addEventListener('click', ()=> {
-  emailSignUpToolTip.classList.toggle('emailSignUpToolTipShow');
-})
+errorEmailSignUp.addEventListener("click", () => {
+  emailSignUpToolTip.classList.toggle("emailSignUpToolTipShow");
+});
 
-// validating email and all the other input validations required
+// validating email and password
 submitSignUp.addEventListener("click", () => {
   let email = document.getElementById("emailSignUp").value;
   let userNameSignUp = document.querySelector(".userNameSignUp").value;
   let passSignUp = document.querySelector(".passSignUp").value;
-  // email validation 
+  // email validation
   emailValidate(email);
   // password validation
   validatePassword(passSignUp);
@@ -65,11 +64,14 @@ submitSignIn.addEventListener("click", () => {
   }
 });
 
+
+// email validation's pattern
 let emailValidation = (email) => {
   const pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
   return pattern.test(email);
-}
+};
 
+//functions for email and password validation's logic
 let emailValidate = () => {
   let email = document.getElementById("emailSignUp").value;
   let userNameSignUp = document.querySelector(".userNameSignUp").value;
@@ -92,8 +94,7 @@ let emailValidate = () => {
   if (passSignUp === "") {
     errorPassSignUp.style.display = "block";
   }
-
-}
+};
 
 let validatePassword = (password) => {
   let hasUpper = false,
@@ -121,5 +122,3 @@ let validatePassword = (password) => {
     console.log("Password Not Approved");
   }
 };
-
-
