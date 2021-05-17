@@ -112,13 +112,11 @@ let validatePassword = (password) => {
 // phone Validation
 let validatePhone = (phone) => {
   let phoneString = phone.toString();
-
-  if (phoneString.length == 10) {
-    console.log("Perfect");
-  } else if (phoneString.length > 10) {
-    console.log("too big");
-  } else {
-    console.log("too small");
+  let phonePattern =  /^([+0-9 ]{10,14})$/;
+  if(phonePattern.test(phone)){
+    errorUserNameSignUp.style.display = 'none'
+  }else{
+    errorUserNameSignUp.style.display = 'block'
   }
 };
 
