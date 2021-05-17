@@ -18,6 +18,7 @@ let submitSignIn = document.querySelector(".submitLogIn");
 
 // declaring the tool tips (hints) for the error icons
 let emailSignUpToolTip = document.querySelector(".emailSignUpToolTip");
+let passwordToolTip = document.querySelector(".passSignUpToolTip");
 
 // setting the default error icons' state to display none
 errorEmailSignUp.style.display = "none";
@@ -26,6 +27,8 @@ errorPassSignUp.style.display = "none";
 
 errorUserNameSignIn.style.display = "none";
 errorPassLoginIn.style.display = "none";
+
+// passwordToolTip.style.display = 'none';
 
 // to toggle b/w sign-in and sign-up
 sign_up_btn.addEventListener("click", () =>
@@ -36,19 +39,19 @@ sign_in_btn.addEventListener("click", () =>
   container.classList.remove("sign-up-mode")
 );
 
-errorEmailSignUp.addEventListener("click", () => {
-  emailSignUpToolTip.classList.toggle("emailSignUpToolTipShow");
-});
-
 // validating email and password
 submitSignUp.addEventListener("click", () => {
-  let email = document.getElementById("emailSignUp").value;
-  let userNameSignUp = document.querySelector(".userNameSignUp").value;
+  const email = document.getElementById("emailSignUp").value;
+  let phoneSignUp = document.querySelector(".userNameSignUp").value;
   let passSignUp = document.querySelector(".passSignUp").value;
   // email validation
-  emailValidate(email);
+  emailValidate();
   // password validation
   validatePassword(passSignUp);
+  // tool tip
+  tootTipShow();
+  // phone validation
+  validatePhone(phoneSignUp);
 });
 
 submitSignIn.addEventListener("click", () => {
@@ -63,7 +66,6 @@ submitSignIn.addEventListener("click", () => {
     errorPassLoginIn.style.display = "none";
   }
 });
-
 
 // email validation's pattern
 let emailValidation = (email) => {
@@ -97,28 +99,33 @@ let emailValidate = () => {
 };
 
 let validatePassword = (password) => {
-  let hasUpper = false,
-    hasLower = false,
-    hasNumber = false;
-  if (password.length >= 8) {
-    for (let i = 0; i < password.length; i++) {
-      if (password[i] === password[i].toUpperCase()) {
-        hasUpper = true;
-      }
-      if (password[i] === password[i].toLowerCase()) {
-        hasLower = true;
-      }
-      if (!isNaN(password[i])) {
-        hasNumber = true;
-      }
-    }
+  const patternUserName = /^([A-Z a-z _@0-9]{8,20})$/;
+  if (patternUserName.test(password)) {
+    errorPassSignUp.style.display = "none";
+    passwordToolTip.style.display = "none";
   } else {
-    console.log("Make a password which is above 8 letters");
+    errorPassSignUp.style.display = "block";
+    passwordToolTip.style.display = "block";
   }
+};
 
-  if (hasUpper === true && hasLower === true && hasNumber === true) {
-    console.log("Password Approved");
+// phone Validation
+let validatePhone = (phone) => {
+  let phoneString = phone.toString();
+
+  if (phoneString.length == 10) {
+    console.log("Perfect");
+  } else if (phoneString.length > 10) {
+    console.log("too big");
   } else {
-    console.log("Password Not Approved");
+    console.log("too small");
+  }
+};
+
+let tootTipShow = () => {
+  if (errorEmailSignUp.style.display == "block") {
+    emailSignUpToolTip.classList.add("emailSignUpToolTipShow");
+  } else {
+    emailSignUpToolTip.classList.remove("emailSignUpToolTipShow");
   }
 };

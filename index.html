@@ -68,7 +68,7 @@
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" id="emailSignUp" autocomplete="off">
+              <input type="text" placeholder="Email" id="emailSignUp" autocomplete="off">
               <img src="./images/error_1.svg" class="error errorEmailSignUp">
               <div class="emailSignUpToolTip">
                 <h3 class="toolTipText">Please Provide a Valid Email</h3>
@@ -79,7 +79,14 @@
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="Password" class="passSignUp">
               <img src="./images/error_1.svg" class="error errorPassSignUp">
-
+              <div class="passSignUpToolTip">
+                <ul>
+                  <li> Password should contain uppercase and lowercase letters. </li>
+                  <li> Password should contain numbers. </li>
+                  <li> Password should not contain special characters. </li>
+                  <li> Minimum length of the password is 8 letters. </li>
+                </ul>
+              </div>
             </div>
             <input type="submit"  value="Sign up" class = 'btn' id="submitSignUp">
             <p class="social-text">Or Sign up with social platforms</p>
