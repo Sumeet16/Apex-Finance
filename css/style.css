@@ -45,6 +45,31 @@ input {
   color: #fff;
 }
 
+.terms{
+  margin: 5px 0px 5px 0px;
+  font-size: 9.5px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.forgot{
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 240px;
+}
+
+.forgot:hover{
+  text-decoration: underline;
+}
+
+.sub{
+  margin-left: 0.5px;
+  color: #7fbc65;
+  cursor: pointer;
+}
+
 .error{
   width: 28px;
   position: relative;
