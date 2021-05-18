@@ -97,7 +97,7 @@ let emailValidate = () => {
     errorPassSignUp.style.display = "block";
   }
 };
-
+// validation for Password
 let validatePassword = (password) => {
   const patternUserName = /^([A-Z a-z _@0-9]{8,20})$/;
   if (patternUserName.test(password)) {
@@ -109,7 +109,7 @@ let validatePassword = (password) => {
   }
 };
 
-// phone Validation
+// validation for phone numbers
 let validatePhone = (phone) => {
   let phoneString = phone.toString();
   let phonePattern =  /^([+0-9 ]{10,14})$/;
