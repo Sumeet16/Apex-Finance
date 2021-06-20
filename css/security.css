@@ -20,7 +20,7 @@
 }
 
 body {
-  /* overflow: hidden; */
+  overflow: hidden;
   font-family: "Poppins", sans-serif;
   background: var(--background-color);
   height: 100vh;
@@ -143,107 +143,65 @@ body {
 }
 
 .backImg {
-  margin-top: 50px;
   margin-left: 27px;
   height: 35px;
   width: 35px;
   cursor: pointer;
 }
 
-.mid {
-  height: 65vh;
-  width: 90%;
-  margin: 20px auto 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.mid{
+    margin: 0 auto;
+    height: 500px;
+    width: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.left {
-  height: 100%;
-  width: 60%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  margin-top: 10px;
-  margin-left: 90px;
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-input,
-button {
-  margin-top: 45px;
-}
-
-input {
-  width: 390px;
-  outline: none;
-  padding: 21px 0px;
-  padding-left: 20px;
-  background: rgba(217, 217, 217, 0.46);
-  border-radius: 15px;
-  color: white;
-  font-weight: 600;
-  border: none;
-  font-size: 16px;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input::placeholder {
-  color: white;
-  font-weight: 600;
-  font-size: 16px;
+h1{
+    color: white;
+    font-size: 50px;
 }
 
 button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.09);
-  border: 1px solid #e1e1e1;
-  box-sizing: border-box;
-  border-radius: 128px;
-  color: white;
-  padding: 10px 25px;
-  font-weight: 600;
-  font-size: 18px;
-}
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid #e1e1e1;
+    box-sizing: border-box;
+    border-radius: 128px;
+    border: 1px solid white;
+    height: 45px;
+    width: 200px;
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
 
-button img {
-  margin-left: 20px;
-}
+ button img{
+    margin-top: 8px;
+  }
 
-h1 {
-  color: white;
-  font-weight: 500;
-  font-size: 45px;
-}
-
-.right {
-  height: 100%;
-  width: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.rightImg {
-  margin-bottom: 80px;
-  margin-left: 40px;
-}
-
-.bottom{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 10px;
-  width: 100%;
-  background: linear-gradient(45.69deg, #4E3399 10.95%, #F153B2 58.86%, #4E3399 99.4%) no-repeat;
-
-}
+  input[type="text"] {
+    background: rgba(217, 217, 217, 0.46);
+    border-radius: 15px;
+    border: none;
+    height: 50px;
+    width: 240px;
+    padding-left: 10px;
+    color: white;
+    font-weight: 600;
+    margin-top: 40px;
+  }
